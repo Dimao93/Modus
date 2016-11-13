@@ -1,0 +1,132 @@
+.services{
+    margin-top: 50px;
+    min-height: 590px;
+}
+.services-title{
+    background: $subBcg;
+    height: 100%;
+    border-radius: 5px;
+    min-height: 100px;
+    padding: 0 35px;
+}
+.services-title__text{
+    @extend .col-md-8, .col-sm-12;
+    margin-top: 20px;
+    h3,p{
+        padding-left: 15px;
+    }
+}
+.services-title__button{
+    @extend .col-md-4, .col-sm-12;
+    text-align: right;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.button-text{
+    display: inline-block;
+    padding: 15px 45px;
+    border-bottom: 3px solid #e2534b;
+    background: #e8645a;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    &:hover{
+        background: $blueMain;
+        border-bottom: 3px solid #528b86;
+    }
+}
+.text-caption{
+        font-size: 30px;
+        color: #7f8c8c;
+}
+.text-description{
+     color: #7f8c8c;
+    font-size:13px;
+    margin-top: 10px;
+}
+.services-block{
+    @extend .col-md-4, .col-sm-4, .col-xs-6;
+    width: 270px;
+    height: 310px;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 5px;
+    border-bottom: 3px solid #e5e6e6;
+    background: #f8f8f8;
+    margin-right: 30px;
+    position: relative;
+    &:last-of-type{
+        margin-right: 0;
+    }
+    &:hover{
+        background: #ffffff;
+    }
+    .fa{
+        color: $button;
+    }
+    &__image{
+        margin-top: 50px;
+    }
+    &__title{
+        margin-top: 17px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color:$textColor;
+        
+    }
+    &__subtitle{
+        margin-top: 37px;
+        font-size: 13px;
+        color:$textColor;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__button{
+        padding: 20px 65px;
+        color: white;
+        background: $blueMain;
+        display: inline-block;
+        border-radius: 5px;
+        border-bottom: 3px solid #62b9b0;
+        font-size: 14px;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 0;
+        margin-bottom: -28.5px;
+        cursor: pointer;
+    }
+    &:hover .services-block__button{
+        background: $redMain;
+        border-bottom: 3px solid #e2534b; 
+    }
+    &:hover .fa{
+        color:  $redMain;
+    }
+}
+
+@media screen and (max-width:995px){
+    .services-title__button{
+        text-align: center;
+    }
+    .services-block{
+        width: 46% !important;
+        &:nth-child(2){
+            margin-right: 0;
+        }
+    }
+    
+}
+@media screen and (max-width:700px){
+    .button-text{
+        font-size: 15px;
+    }
+    .text-caption{
+       text-align: center;
+    }
+    .service-block, .col-md-4, .col-sm-4, .col-xs-6{
+        width: 100% !important;
+    }
+}

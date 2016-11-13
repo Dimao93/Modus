@@ -1,0 +1,208 @@
+body{
+    max-width: 100%;
+    margin: 0 auto;
+    background: $mainBcg;
+    font-family: 'Open Sans', sans-serif;
+
+ 
+}
+header{
+    height: 80px;
+    background: url(../img/menu-bcg.png) no-repeat bottom;        
+    background-color:$blueMain;
+}
+.header-logo{
+    display: inline-block;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+   
+    span{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.header-menu{
+    display: inline-block;
+    float: right;
+    ul{
+        display: inline-block;     
+    }
+    &__item{
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 400;
+        margin-right: 15px;
+        margin-top: 35px;
+     a{
+             text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+         &:hover{
+             background: $redMain;
+             border-bottom: 3px solid #e2534b;
+         }
+     }
+    }
+   
+}
+ .header-menu__search{
+        display: inline-block;
+         color: white;
+         cursor: pointer;
+     i{
+         padding: 10px;
+        border-radius: 5px;
+         &:hover{
+             background: $redMain;
+             border-bottom: 3px solid #e2534b;
+         }
+     }
+     .fa-times{
+         display: none;
+     }
+ }
+.dropdown{
+    position: relative;
+        i{
+            padding: 0 5px 0px 0;
+        }
+}
+.dropdown-menu{
+    position: absolute;
+    z-index: 2;
+    top: 35px;
+    left: 0;
+    width: 200px;
+    background: #e8645a;
+    border-radius: 5px;
+    text-align: center;
+        li{
+            padding: 15px 0;
+            text-transform: capitalize;
+                    &:last-of-type{
+                        border-radius: 5px;
+                    }
+            i{
+                padding: 0 5px;
+            }
+            a{
+                   padding: 10px 15px 10px 0;
+                    margin-top: 5px;
+                    background: #e5655d;
+                    border-radius: 5px;
+                &:hover{
+                    background: $blueMain;
+                }
+            }    
+        }    
+}
+.fa-sort-asc{
+   position: absolute;
+    top: -5px;
+    left: 12px;
+    color: $redMain;
+}
+ul.dropdown-menu{
+    display: none;
+}
+.active a{  
+    background: #62a29e;
+    border-bottom: 3px solid #528b86;
+}
+.header-menu__button{
+    display: inline-block;
+    position: absolute;
+    color: white;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    display: none;
+}
+.search-form{
+    position: absolute;
+    z-index: 3;
+    top: 110px;
+    left: 50%;
+    margin: -26px 0 0 -150px;
+    display: none;
+   
+    p{
+           background: white;
+            border-radius: 5px;
+            height: 45px;
+            width: 300px;
+    }
+    input{
+        border: none;
+        position: relative;
+        top: 12px;
+        left: 12px;
+        width: 250px;
+        cursor: pointer;
+        &:focus{
+           outline: none;
+        }
+        
+    }
+    label{
+        position: relative;
+        top: 13px;
+        left: 10px;
+    }
+}
+.black-bcg{
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+
+
+ @media screen and (max-width: 1000px) {
+     .header-menu{ 
+         display:none;
+         margin-top: -3px;
+         width: 100%;
+         text-align: center;
+         ul{
+             background:  $blueMain;
+             width: 100%;
+             border-radius: 0 0 5px 5px;
+             top: 20px;
+             position: absolute;
+             left: 0;
+             opacity: 0.9;
+             z-index: 2;
+             top: 80px;
+         }
+         &__item{
+             display: block;
+         }
+         &__button{
+             display: block;
+         }
+         &__search{
+                 display: block;
+                margin-top: 15px;
+         }
+     }
+     ul.dropdown-menu{
+         position: relative;
+		 top: 10px;
+         
+         a:hover{
+             background: $redMain;;     
+         }
+         a{
+             
+         background: $blueMain;
+         }
+     }
+     i.fa-sort-asc{
+         display: none;
+     }
+   }
